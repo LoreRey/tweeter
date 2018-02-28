@@ -41,7 +41,7 @@
     align-content: center;
     width: 100%;
     padding: 10px 0;
-    margin-top: 15%;
+    margin-top: 5%;
     word-wrap: break-word;
 }
 
@@ -83,8 +83,8 @@
 }
 
 .tweets .icon {
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     padding-left: 10px;
     padding-top: 10px;
     padding-right: 10px;
