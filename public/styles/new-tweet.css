@@ -24,8 +24,97 @@
     font-size: 15px;
     float: right;
     margin-top: 5px;
+    color: black;
+}
+
+.counter.overMax {
+    color: red;
 }
 
 .new-tweet h2 {
     border-bottom: 1px solid black;
 }
+
+/********************/
+
+.tweets {
+    align-content: center;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 15%
+}
+
+
+.tweets header {
+    background-color: #eee;
+    height: 80px;
+
+}
+
+.tweets h2 {
+    padding-left: 5px;
+    float: left;
+    margin-top: 7px;
+}
+
+.tweets article {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.tweets article:hover {
+    opacity: 1;
+}
+
+.tweet {
+    font-size: 1.5em;
+    vertical-align: top;
+    padding-left: 15px
+}
+
+.tweets .user_handle {
+    color: grey;
+    margin-top: 1px;
+    padding: 10px;
+    float: right;
+}
+
+.tweets .icon {
+    height: 70px;
+    width: 70px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    float: left;
+    border-radius: 15px
+}
+
+.tweets .footer {
+    border-top: 1px solid #eee;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tweets .date {
+    padding-left: 10px;
+}
+
+.bt_icons {
+    float: right;
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+}
+
+.tweets article:hover .bt_icons {
+    opacity: 1;
+}
+
+
+
