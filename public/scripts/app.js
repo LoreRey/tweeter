@@ -89,6 +89,25 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+  // Get the data after submitted from the new tweet form
+  $('#new-tweet').on('submit', function (event) {
+  // Prevent the default behaviour
+  event.preventDefault();
+  // Get the data from the form
+  let formData = $('#new-tweet').serialize();
+  $.ajax({
+  url: "/tweets",
+  method: "POST",
+  data: formData,
+  success: function(result) {
+    $(".new-tweet form textarea").val("");
+  }
+  });
+});
+});
+
+
 
 
 
