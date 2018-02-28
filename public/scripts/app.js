@@ -1,5 +1,5 @@
 
- const data = [
+ /*const data = [
   {
     "user": {
       "name": "Newton",
@@ -44,8 +44,9 @@
     },
     "created_at": 1461113796368
   }
-];
+];*/
 
+$(document).ready(function() {
 
 function createTweetElement(tweets) {
   let tweetContent = tweets.content.text;
@@ -76,7 +77,6 @@ function createTweetElement(tweets) {
 
 }
 
-
 function renderTweets(tweets) {
   tweets.forEach(function(tweet) {
       let newTweet = createTweetElement(tweet);
@@ -84,17 +84,9 @@ function renderTweets(tweets) {
   });
 }
 
-$(document).ready(function() {
-  renderTweets(data)
-});
 
-
-$(document).ready(function() {
-  // Get the data after submitted from the new tweet form
   $('#new-tweet').on('submit', function (event) {
-  // Prevent the default behaviour
   event.preventDefault();
-  // Get the data from the form
   let formData = $('#new-tweet').serialize();
   $.ajax({
   url: "/tweets",
@@ -102,18 +94,25 @@ $(document).ready(function() {
   data: formData,
   success: function(result) {
     $(".new-tweet form textarea").val("");
-  }
+    loadTweets();
+    }
   });
+ });
+
+function loadTweets() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    success: function (data) {
+      $('.tweets').empty();
+        renderTweets(data)
+    }
+  });
+ }
+ loadTweets()
+
+
 });
-});
-
-
-
-
-
-
-
-
 
 
 
