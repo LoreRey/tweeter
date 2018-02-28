@@ -87,16 +87,22 @@ function renderTweets(tweets) {
 
   $('#new-tweet').on('submit', function (event) {
   event.preventDefault();
-  let formData = $('#new-tweet').serialize();
+  let tweetLength = $('#new-tweet textarea').val().length;
+  if(tweetLength > 140) {
+    alert('Tweet has exceeded max of 140 characters!');
+  } else if (tweetLength === 0) {
+    alert(`Sorry! You can't submit an empty tweet!`);
+  } else {
   $.ajax({
   url: "/tweets",
   method: "POST",
-  data: formData,
+  data: $('#new-tweet').serialize(),
   success: function(result) {
-    $(".new-tweet form textarea").val("");
+    $('#new-tweet textarea').val("");
     loadTweets();
     }
   });
+  }
  });
 
 function loadTweets() {
