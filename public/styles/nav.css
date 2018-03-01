@@ -1,9 +1,9 @@
 #nav-bar {
     overflow: hidden;
     background-color: #00a087;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 80px;
     color: #e8fdff;
     padding-left: 2em;
@@ -22,5 +22,26 @@
     font-size: 2em;
     line-height: 80px;
     color: #e8fdff;
+}
+
+#nav-bar .compose {
+    float: right;
+    padding: 10px;
+    margin-top: 12px;
+    color: #439c89;
+    font-size: large;
+    background-color: #d3fff8;
+    border: 1px solid #232222fc;
+    border-radius: 5px;
+    opacity: 0.8;
+    height: 55px;
+    width: 110px;
+}
+
+#nav-bar .compose:hover {
+      opacity: 0.9;
+      cursor: pointer;
+      background-color: white;
+      color: black;
 }
 

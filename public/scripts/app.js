@@ -78,6 +78,15 @@ function loadTweets() {
  loadTweets()
 
 
+ $('.compose').on('click', function() {
+  let $newTweet = $('.new-tweet');
+  $newTweet.slideToggle();
+  $newTweet.find('textarea').select();
+ });
+
+ loadTweets();
+
+
 });
 
 
