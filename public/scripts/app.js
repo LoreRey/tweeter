@@ -59,6 +59,7 @@ function renderTweets(tweets) {
   data: $('#new-tweet').serialize(),
   success: function(result) {
     $('#new-tweet textarea').val("");
+    $('#new-tweet .counter').text(140);
     loadTweets();
     }
   });
