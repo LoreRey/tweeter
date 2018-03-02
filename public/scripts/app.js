@@ -44,6 +44,7 @@ function renderTweets(tweets) {
   });
 }
 
+// Posts new tweet from form.
 
   $('#new-tweet').on('submit', function (event) {
   event.preventDefault();
@@ -79,6 +80,8 @@ function loadTweets() {
  loadTweets()
 
 
+// Compose toggle from compose form
+
  $('.compose').on('click', function() {
   let $newTweet = $('.new-tweet');
   $newTweet.slideToggle();
@@ -88,6 +91,7 @@ function loadTweets() {
  loadTweets();
 
 
+// function to indicate the time the post was submitted.
 
 function timeStamp(now, date) {
 let seconds = Math.floor(now - date) / 1000;

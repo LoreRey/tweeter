@@ -13,6 +13,5 @@ $(document).ready(function() {
   });
 });
 
-//classof for css
-//sibling to get to counter this.sibling
+
 
