@@ -27,3 +27,11 @@ The latest tweet will show right on top of the list!
 
 !["The latest tweet will show right on top of the list!"](https://github.com/LoreRey/tweeter/blob/master/public/images/New%20Tweet.png?raw=true)
 
+
+## Getting Started
+
+- Install dependencies using the npm install command.
+- Start the web server using the npm run local command. The app will be served at http://localhost:8080/.
+- Go to http://localhost:8080/ in your browser.
+
+
